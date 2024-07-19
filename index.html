@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
+    <script src="gamesc.js" defer></script>
     <style>
         * {
             margin: 0;
@@ -16,7 +17,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 100px;
+            gap: 66px;
         }
         h1 {
             font-family: Arial;
@@ -35,15 +36,36 @@
             font-size: 30px;
             font-weight: bold;
         }
-        input:hover {
+        input:hover:enabled {
             cursor: pointer;
             background-color: rgb(57, 57, 57);
+        }
+
+        .btncontainer {
+            display:flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        input:disabled {
+            color: gray;
+        }
+
+        .secondline {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
         }
     </style>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <input type="button" id="playbtn" value="Play">
-    <script src="gamesc.js"></script>
+    <h1>Pick One</h1>
+    <div class="secondline">
+    </div>
+    <div class="btncontainer">
+        <input type="button" class="rockbtn" value="Rock">
+        <input type="button" class="paperbtn" value="Paper">
+        <input type="button" class="scissorsbtn" value="Scissors">
+    </div>
 </body>
 </html>
